@@ -29,7 +29,7 @@ Address parse_line(char* line)
 	return addr;
 }
 
-void dump_stack(char *pid,char *name,char *output)
+void dump(char *pid,char *name,char *output)
 {
 	char* path = malloc(LINE_LENGTH+1);
 	char* line = malloc(LINE_LENGTH+1);
@@ -109,7 +109,7 @@ int main(int argc,char** argv)
 		perror("Wrong pid");
 		exit(-1);
 	}
-	dump_stack(argv[1],argv[2],argv[3]);
+	dump(argv[1],argv[2],argv[3]);
 	return 0;
 }
 
